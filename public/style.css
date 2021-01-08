@@ -1,0 +1,11 @@
+.app {
+  color: grey;
+}
+body {
+  -webkit-touch-callout: none !important;
+}
+a,
+button,
+body {
+  -webkit-user-select: none !important;
+}
