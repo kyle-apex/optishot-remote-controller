@@ -1,7 +1,7 @@
 import * as React from 'react';
 import KeyboardButton from './KeyboardButton/KeyboardButton';
 import KeyholdButton from './KeyboardButton/KeyholdButton';
-import styles from './Controller.css';
+import styles from './Controller.module.css';
 import axios from 'axios';
 // import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ export default function Controller() {
       </div>
       {/* next hole ctrl p */}
       {/* select a hole */}
-      <div>
+      <div className="row">
         <KeyboardButton keyCode="o" modifier="control">
           Map
         </KeyboardButton>
@@ -42,11 +42,11 @@ export default function Controller() {
         </KeyboardButton>
       </div>
       <div className="row">
-        <div>
+        <div className="column">
           <KeyboardButton keyCode="pageup">Angle Up</KeyboardButton>
           <KeyboardButton keyCode="pagedown">Angle Down</KeyboardButton>
         </div>
-        <div>
+        <div className="column">
           <KeyboardButton keyCode="up">Club Up</KeyboardButton>
           <KeyboardButton keyCode="down">Club Down</KeyboardButton>
         </div>
@@ -59,9 +59,6 @@ export default function Controller() {
           <KeyholdButton keyCode="right">Right</KeyholdButton>
         </div>
       </div>
-      <button onTouchMove={mouseMove} className={styles.mousepad}>
-        hello
-      </button>
     </div>
   );
 }

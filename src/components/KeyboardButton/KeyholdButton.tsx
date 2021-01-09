@@ -1,6 +1,6 @@
 import * as React from 'react';
 import axios from 'axios';
-import styles from './KeyboardButton.css';
+import styles from './KeyboardButton.module.css';
 // import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 interface Props {

@@ -35,7 +35,7 @@ const commonConfig = {
         loader: 'ts-loader',
       },
       {
-        test: /\.css$/i,
+        test: /module\.css$/i,
         exclude: /node_modules/,
         use: [
           'style-loader',
@@ -48,7 +48,7 @@ const commonConfig = {
         ],
       },
       {
-        test: /\.(scss)$/,
+        test: /(?<!module)\.(css|scss)$/,
         use: ['style-loader', 'css-loader'],
       },
       {
