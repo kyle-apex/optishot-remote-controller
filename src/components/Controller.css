@@ -1,0 +1,49 @@
+.row > *,
+.column > * {
+  flex: 1 0 auto;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.middle-column {
+  flex: 0 1 20vw;
+  min-width: 100px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.button-cell {
+  padding: 10px;
+  display: flex;
+}
+.first-row .button-cell,
+.second-row .button-cell {
+  flex: 1 1;
+}
+
+.first-row {
+  height: 20vh;
+  max-height: 100px;
+}
+
+.second-row {
+  height: 20vh;
+  max-height: 100px;
+}
+
+.shot-selection-row {
+  flex: 2 0 auto;
+}
+
+.right-left-row {
+  height: 20vh;
+  max-height: 100px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

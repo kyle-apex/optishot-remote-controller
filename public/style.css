@@ -3,20 +3,19 @@
 }
 body {
   -webkit-touch-callout: none !important;
+  margin: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(216deg, rgba(2, 0, 36, 1) 0%, rgba(16, 43, 65, 1) 35%, rgba(59, 86, 108, 1) 100%);
 }
+/*html,
+body,
+.app {
+  height: calc(100%);
+}*/
 a,
 button,
 body {
   -webkit-user-select: none !important;
 }
-.row > * {
-  flex: 1 0 auto;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-}
+
+@import '../src/components/Controller.css';
