@@ -77,7 +77,6 @@ detectPort(port, (err, availablePort) => {
     port = String(Number(port) - 1);
     process.env.PORT = port;
   }
-
   app.listen(port);
   console.log('server started on port:', port);
 });
