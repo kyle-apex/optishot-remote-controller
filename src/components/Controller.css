@@ -7,10 +7,6 @@
   flex-direction: column;
   align-items: center;
 }
-.middle-column {
-  /*flex: 0 1 20vw;
-  min-width: 100px;*/
-}
 .middle-column .button-cell {
   width: 100%;
   height: 30%;
@@ -75,6 +71,12 @@ svg {
   height: 1em;
   width: 1em;
 }
+@media screen and (max-height: 430px) {
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+}
 .horizontal-arrow-container .button-cell:first-child button:last-child svg {
   padding-left: 20px;
 }
@@ -83,14 +85,14 @@ svg {
 }
 
 .vertical-arrow-container {
-  width: 80px;
-  border-radius: 40px;
+  width: 20vw;
+  border-radius: 10vw;
   flex-direction: column;
   margin: 20px 0px;
 }
 .horizontal-arrow-container {
   flex-direction: row;
-  margin: 10px 10%;
+  margin: 0px 10% 20px;
   border-radius: 40px;
 }
 .vertical-arrow-container,
