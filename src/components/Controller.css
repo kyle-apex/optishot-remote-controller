@@ -47,3 +47,9 @@
   display: flex;
   flex-direction: column;
 }
+.buttons-label {
+  flex: 0 0 20px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}

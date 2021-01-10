@@ -1,6 +1,7 @@
 import * as React from 'react';
 import KeyboardButton from './KeyboardButton/KeyboardButton';
 import KeyholdButton from './KeyboardButton/KeyholdButton';
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 //import styles from './Controller.css';
 
 export default function Controller() {
@@ -9,7 +10,7 @@ export default function Controller() {
       <div className="first-row row">
         <div className="button-cell">
           <KeyboardButton keyCode="h" modifier="control">
-            Left/Right Hand
+            L/R Hand
           </KeyboardButton>
         </div>
         <div className="button-cell">
@@ -41,10 +42,15 @@ export default function Controller() {
       <div className="row shot-selection-row">
         <div className="column">
           <div className="button-cell">
-            <KeyboardButton keyCode="pageup">Angle Up</KeyboardButton>
+            <KeyboardButton keyCode="pageup">
+              <FaChevronUp />
+            </KeyboardButton>
           </div>
+          <div className="buttons-label">Angle</div>
           <div className="button-cell">
-            <KeyboardButton keyCode="pagedown">Angle Down</KeyboardButton>
+            <KeyboardButton keyCode="pagedown">
+              <FaChevronDown />
+            </KeyboardButton>
           </div>
         </div>
         <div className="column middle-column">
@@ -59,10 +65,15 @@ export default function Controller() {
         </div>
         <div className="column">
           <div className="button-cell">
-            <KeyboardButton keyCode="up">Club Up</KeyboardButton>
+            <KeyboardButton keyCode="up">
+              <FaChevronUp />
+            </KeyboardButton>
           </div>
+          <div className="buttons-label">Club</div>
           <div className="button-cell">
-            <KeyboardButton keyCode="down">Club Down</KeyboardButton>
+            <KeyboardButton keyCode="down">
+              <FaChevronDown />
+            </KeyboardButton>
           </div>
         </div>
       </div>
