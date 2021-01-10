@@ -14,7 +14,7 @@
     "rebuild": "electron-rebuild -f -w robotjs"
   },
   "build": {
-    "appId": "com.kyle-apex.optishot_remote_controller",
+    "appId": "optishot_remote_controller",
     "productName": "Optishot Remote Controller",
     "directories": {
       "app": "./dist/",
