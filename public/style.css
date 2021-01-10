@@ -1,5 +1,5 @@
 .app {
-  color: grey;
+  color: rgb(54, 55, 73);
   z-index: 2;
   position: relative;
 }
@@ -24,6 +24,31 @@ a,
 button,
 body {
   -webkit-user-select: none !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home {
+  padding:20px;
+  padding-top:0;
+}
+.home .column {
+  padding: 10px;
+  justify-content: center;
+}
+.secondary {
+  color:green;
+}
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color:green; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+h2,h1 {text-align:center; font-family: Verdana, Geneva, Tahoma, sans-serif}
+h2 {font-size:16px;}
+li {
+  margin-bottom:10px;
 }
 
 @import '../src/components/Controller.css';

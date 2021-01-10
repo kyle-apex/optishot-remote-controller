@@ -13,8 +13,8 @@ const server = require('../server');
 function createWindow(): void {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    height: 400,
-    width: 600,
+    height: 420,
+    width: 700,
     webPreferences: {
       webSecurity: false,
       devTools: process.env.NODE_ENV !== 'production',
