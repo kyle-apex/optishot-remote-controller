@@ -1,7 +1,10 @@
 import * as React from 'react';
 import KeyboardButton from './KeyboardButton/KeyboardButton';
 import KeyholdButton from './KeyboardButton/KeyholdButton';
-import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
+import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { MdGolfCourse, MdShuffle, MdTune, MdUndo, MdMap, MdViewList, MdSwitchVideo, MdExitToApp } from 'react-icons/md';
+import { RiRulerLine } from 'react-icons/ri';
+import { GiMultipleTargets, GiHand } from 'react-icons/gi';
 //import styles from './Controller.css';
 
 export default function Controller() {
@@ -10,79 +13,100 @@ export default function Controller() {
       <div className="first-row row">
         <div className="button-cell">
           <KeyboardButton keyCode="h" modifier="control">
-            L/R Hand
+            <GiHand />
           </KeyboardButton>
         </div>
         <div className="button-cell">
           <KeyboardButton keyCode="s" modifier="control">
-            Score
+            <MdViewList />
           </KeyboardButton>
         </div>
         <div className="button-cell">
-          <KeyboardButton keyCode="f9">Camera</KeyboardButton>
+          <KeyboardButton keyCode="f9">
+            <MdSwitchVideo />
+          </KeyboardButton>
         </div>
       </div>
       <div className="row second-row">
         <div className="button-cell">
-          <KeyboardButton keyCode="o" modifier="control">
-            Map
+          <KeyboardButton keyCode="a" modifier="control">
+            <GiMultipleTargets />
           </KeyboardButton>
         </div>
         <div className="button-cell">
           <KeyboardButton keyCode="d" modifier="control">
-            Shot Stats
+            <MdTune />
           </KeyboardButton>
         </div>
         <div className="button-cell">
-          <KeyboardButton keyCode="a" modifier="control">
-            Accuracy
+          <KeyboardButton keyCode="o" modifier="control">
+            <MdMap />
           </KeyboardButton>
         </div>
       </div>
       <div className="row shot-selection-row">
         <div className="column">
-          <div className="button-cell">
-            <KeyboardButton keyCode="pageup">
-              <FaChevronUp />
-            </KeyboardButton>
-          </div>
-          <div className="buttons-label">Angle</div>
-          <div className="button-cell">
-            <KeyboardButton keyCode="pagedown">
-              <FaChevronDown />
-            </KeyboardButton>
+          <div className="vertical-arrow-container">
+            <div className="button-cell">
+              <KeyboardButton keyCode="pageup">
+                <FaChevronUp />
+              </KeyboardButton>
+            </div>
+            <div className="buttons-label">
+              <MdShuffle />
+            </div>
+            <div className="button-cell">
+              <KeyboardButton keyCode="pagedown">
+                <FaChevronDown />
+              </KeyboardButton>
+            </div>
           </div>
         </div>
         <div className="column middle-column">
           <div className="button-cell">
             <KeyboardButton keyCode="r" modifier="control">
-              Mulligan
+              <MdUndo />
             </KeyboardButton>
           </div>
           <div className="button-cell">
-            <KeyboardButton keyCode="escape">Escape</KeyboardButton>
+            <KeyboardButton keyCode="escape">
+              <MdExitToApp />
+            </KeyboardButton>
           </div>
         </div>
         <div className="column">
-          <div className="button-cell">
-            <KeyboardButton keyCode="up">
-              <FaChevronUp />
-            </KeyboardButton>
-          </div>
-          <div className="buttons-label">Club</div>
-          <div className="button-cell">
-            <KeyboardButton keyCode="down">
-              <FaChevronDown />
-            </KeyboardButton>
+          <div className="vertical-arrow-container">
+            <div className="button-cell">
+              <KeyboardButton keyCode="up">
+                <FaChevronUp />
+              </KeyboardButton>
+            </div>
+            <div className="buttons-label">
+              <RiRulerLine />
+            </div>
+            <div className="button-cell">
+              <KeyboardButton keyCode="down">
+                <FaChevronDown />
+              </KeyboardButton>
+            </div>
           </div>
         </div>
       </div>
       <div className="row right-left-row">
-        <div className="button-cell">
-          <KeyholdButton keyCode="left">Left</KeyholdButton>
-        </div>
-        <div className="button-cell">
-          <KeyholdButton keyCode="right">Right</KeyholdButton>
+        <div className="horizontal-arrow-container">
+          <div className="button-cell">
+            <KeyholdButton keyCode="left">
+              <FaChevronLeft />
+            </KeyholdButton>
+          </div>
+          <div className="buttons-label">
+            <MdGolfCourse />
+          </div>
+          <div className="button-cell">
+            <KeyholdButton keyCode="right">
+              <FaChevronRight />
+            </KeyholdButton>
+          </div>
         </div>
       </div>
     </div>

@@ -1,17 +1,24 @@
 .app {
   color: grey;
+  z-index: 2;
+}
+.gradient-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(216deg, rgb(230, 229, 248) 0%, rgb(214, 228, 240) 35%, rgb(238, 238, 238) 100%);
+  opacity: 0.9;
+  z-index: 1;
 }
 body {
   -webkit-touch-callout: none !important;
   margin: 0;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(216deg, rgba(2, 0, 36, 1) 0%, rgba(16, 43, 65, 1) 35%, rgba(59, 86, 108, 1) 100%);
+  background: url(./course-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-/*html,
-body,
-.app {
-  height: calc(100%);
-}*/
 a,
 button,
 body {

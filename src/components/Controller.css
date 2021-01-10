@@ -5,10 +5,15 @@
 .column {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .middle-column {
-  flex: 0 1 20vw;
-  min-width: 100px;
+  /*flex: 0 1 20vw;
+  min-width: 100px;*/
+}
+.middle-column .button-cell {
+  width: 100%;
+  height: 30%;
 }
 .row {
   display: flex;
@@ -17,9 +22,12 @@
 .button-cell {
   padding: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .first-row .button-cell,
-.second-row .button-cell {
+.second-row .button-cell,
+.shot-selection-row .column {
   flex: 1 1;
 }
 
@@ -50,6 +58,56 @@
 .buttons-label {
   flex: 0 0 20px;
   text-align: center;
-  color: white;
+  color: gray;
   font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  height: 2em;
+  width: 2em;
+}
+
+.vertical-arrow-container {
+  width: 80px;
+  border-radius: 40px;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+.horizontal-arrow-container {
+  flex-direction: row;
+  margin: 10px 10%;
+  border-radius: 40px;
+}
+.vertical-arrow-container,
+.horizontal-arrow-container {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  background: rgb(255, 255, 255, 0.9);
+  display: flex;
+}
+.vertical-arrow-container > *,
+.horizontal-arrow-container > * {
+  flex: 1 1;
+}
+.vertical-arrow-container button,
+.horizontal-arrow-container button {
+  background-color: transparent;
+  box-shadow: none;
+}
+.vertical-arrow-container .button-cell:first-child {
+  margin-top: 5px;
+  align-items: flex-start;
+}
+.vertical-arrow-container .button-cell:last-child {
+  align-items: flex-end;
+  margin-bottom: 5x;
+}
+.horizontal-arrow-container .button-cell:first-child {
+  justify-content: flex-start;
+}
+.horizontal-arrow-container .button-cell:last-child {
+  justify-content: flex-end;
 }
