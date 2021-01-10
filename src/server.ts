@@ -8,6 +8,8 @@ const robot = require('robotjs');
 
 import os from 'os';
 
+import detectPort from 'detect-port';
+
 app.get('/', (req: any, res: any) => {
   res.redirect(301, '/controller');
 });
@@ -18,7 +20,7 @@ app.use(express.static(path.join(__dirname, '')));
 // let the react app to handle any unknown routes
 // serve up the index.html if express does'nt recognize the route
 app.get('/serverInfo', function (req: any, res: any) {
-  res.send({ hostname: os.hostname(), port: PORT });
+  res.send({ hostname: os.hostname(), port: port });
 });
 
 app.get('*', (req: any, res: any) => {
@@ -67,6 +69,15 @@ function releaseKey(keyCode: string, modifiers?: string[]) {
 }
 
 // if not in production use the port 5000
-const PORT = process.env.PORT || 4999;
-console.log('server started on portss:', PORT);
-app.listen(PORT);
+let port = process.env.PORT || '5000';
+
+// if not available, try one more port
+detectPort(port, (err, availablePort) => {
+  if (port !== String(availablePort)) {
+    port = String(Number(port) - 1);
+    process.env.PORT = port;
+  }
+
+  app.listen(port);
+  console.log('server started on port:', port);
+});

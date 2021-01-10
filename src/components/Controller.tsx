@@ -98,11 +98,17 @@ export default function Controller() {
             <KeyholdButton keyCode="left">
               <FaChevronLeft />
             </KeyholdButton>
+            <KeyboardButton keyCode="left">
+              <FaChevronLeft />
+            </KeyboardButton>
           </div>
           <div className="buttons-label">
             <MdGolfCourse />
           </div>
           <div className="button-cell">
+            <KeyboardButton keyCode="right">
+              <FaChevronRight />
+            </KeyboardButton>
             <KeyholdButton keyCode="right">
               <FaChevronRight />
             </KeyholdButton>

@@ -70,6 +70,18 @@ svg {
   width: 2em;
 }
 
+.horizontal-arrow-container .button-cell:first-child button:last-child svg,
+.horizontal-arrow-container .button-cell:last-child button:first-child svg {
+  height: 1em;
+  width: 1em;
+}
+.horizontal-arrow-container .button-cell:first-child button:last-child svg {
+  padding-left: 20px;
+}
+.horizontal-arrow-container .button-cell:last-child button:first-child svg {
+  padding-right: 20px;
+}
+
 .vertical-arrow-container {
   width: 80px;
   border-radius: 40px;
