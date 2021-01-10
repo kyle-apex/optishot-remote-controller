@@ -1,6 +1,7 @@
 .app {
   color: grey;
   z-index: 2;
+  position: relative;
 }
 .gradient-overlay {
   position: absolute;

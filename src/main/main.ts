@@ -4,7 +4,7 @@
 import * as path from 'path';
 import * as url from 'url';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { BrowserWindow, app } from 'electron';
+import { BrowserWindow, app, Menu } from 'electron';
 
 let mainWindow: Electron.BrowserWindow | null;
 
@@ -13,8 +13,8 @@ const server = require('../server');
 function createWindow(): void {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800,
+    height: 400,
+    width: 600,
     webPreferences: {
       webSecurity: false,
       devTools: process.env.NODE_ENV !== 'production',

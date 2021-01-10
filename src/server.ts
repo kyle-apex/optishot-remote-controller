@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '')));
 // let the react app to handle any unknown routes
 // serve up the index.html if express does'nt recognize the route
 app.get('/serverInfo', function (req: any, res: any) {
-  res.send({ hostname: os.hostname() });
+  res.send({ hostname: os.hostname(), port: PORT });
 });
 
 app.get('*', (req: any, res: any) => {
