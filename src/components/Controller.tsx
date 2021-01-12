@@ -5,7 +5,6 @@ import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react
 import { MdGolfCourse, MdShuffle, MdTune, MdUndo, MdMap, MdViewList, MdSwitchVideo, MdExitToApp } from 'react-icons/md';
 import { RiRulerLine } from 'react-icons/ri';
 import { GiMultipleTargets, GiHand } from 'react-icons/gi';
-//import styles from './Controller.css';
 
 export default function Controller() {
   return (

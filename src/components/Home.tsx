@@ -57,6 +57,7 @@ export default function Home() {
             <li>On your phone or tablet, type the URL below in your browser or use the QR Code to open the remote</li>
 
             <li>{`On Mac, ensure the remote has access to use your keyboard: Settings > Security & Privacy > Accessbility > Click "Optishot Remote Controller"`}</li>
+            <li>Connect your computer and phone/tablet to the same WiFi network</li>
             <li>Keep this application running</li>
             <li>Open Optishot and Enjoy!</li>
           </ul>
