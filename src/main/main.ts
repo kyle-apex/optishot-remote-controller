@@ -13,7 +13,7 @@ const server = require('../server');
 function createWindow(): void {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    height: 420,
+    height: 460,
     width: 700,
     webPreferences: {
       webSecurity: false,

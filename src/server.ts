@@ -10,9 +10,13 @@ import os from 'os';
 
 import detectPort from 'detect-port';
 
+import ip from 'ip';
+
 app.get('/', (req: any, res: any) => {
   res.redirect(301, '/controller');
 });
+
+app.set('trust proxy', true);
 
 // serve up production assets
 app.use(express.static(path.join(__dirname, '')));
@@ -20,7 +24,7 @@ app.use(express.static(path.join(__dirname, '')));
 // let the react app to handle any unknown routes
 // serve up the index.html if express does'nt recognize the route
 app.get('/serverInfo', function (req: any, res: any) {
-  res.send({ hostname: os.hostname(), port: port });
+  res.send({ hostname: ip.address() || os.hostname(), port: port });
 });
 
 app.get('*', (req: any, res: any) => {
