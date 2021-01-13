@@ -96,7 +96,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyle-apex/optishot-remote-control"
+    "url": "git+https://github.com/kyle-apex/optishot-remote-controller"
   },
   "keywords": [
     "optishot",
@@ -109,7 +109,7 @@
     "controller"
   ],
   "bugs": {
-    "url": "https://github.com/Devtography/electron-react-typescript-webpack-boilerplate/issues"
+    "url": "https://github.com/kyle-apex/optishot-remote-controller/issues"
   },
-  "homepage": "https://github.com/Devtography/electron-react-typescript-webpack-boilerplate#readme"
+  "homepage": "https://github.com/kyle-apex/optishot-remote-controller#readme"
 }
