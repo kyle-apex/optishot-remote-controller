@@ -1,3 +1,5 @@
+![App Preview](https://github.com/kyle-apex/optishot-remote-controller/blob/master/public/apppreview.png?raw=true)
+
 # Optishot Remote Controller
 
 Remote Control for the Optishot 2 Golf Simulator
