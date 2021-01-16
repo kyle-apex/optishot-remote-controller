@@ -3,6 +3,8 @@ dist/
 node_modules/
 out/
 extras/
+package-lock.json
+.github/
 
 # Logs
 logs
