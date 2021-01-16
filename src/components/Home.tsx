@@ -44,7 +44,10 @@ export default function Home() {
   return (
     <div className="home">
       <h1>
-        Take control of your <span className="secondary">Optishot!</span>
+        Take control of your{' '}
+        <span className="secondary" id="headingBrand">
+          Optishot!
+        </span>
       </h1>
       <div className="row">
         <div className="column">
@@ -64,7 +67,9 @@ export default function Home() {
         </div>
       </div>
       <h2>
-        http://{hostname}:{port}
+        <span>http://</span>
+        <span className="host">{hostname}</span>
+        <span>:{port}</span>
       </h2>
     </div>
   );
