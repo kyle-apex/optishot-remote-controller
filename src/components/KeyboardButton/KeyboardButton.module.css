@@ -10,7 +10,7 @@
   display: inline-block;
   font-size: 14px;
   outline: 0;
-  box-shadow: 0 2px 2px 0 grey, 0 3px 1px -2px grey, 0 1px 5px 0 grey;
+  box-shadow: 0 2px 5px 0 grey, 0 3px 5px -2px grey, 0 1px 7px 0 grey;
   position: relative;
   cursor: pointer;
   overflow: hidden;

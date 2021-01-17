@@ -10,7 +10,7 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(216deg, rgb(230, 229, 248) 0%, rgb(214, 228, 240) 35%, rgb(238, 238, 238) 100%);
-  opacity: 0.9;
+  opacity: 0.7;
   z-index: 1;
 }
 body {

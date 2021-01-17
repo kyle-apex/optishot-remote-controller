@@ -28,9 +28,22 @@
 }
 
 .second-row,
-.right-left-row,
 .first-row {
+  height: 16vh;
+}
+
+.right-left-row {
   height: 20vh;
+}
+
+@media screen and (max-height: 800px) {
+  .second-row,
+  .first-row {
+    height: 14vh;
+  }
+  .right-left-row {
+    height: 18vh;
+  }
 }
 
 .shot-selection-row {
@@ -68,7 +81,7 @@ svg {
     width: 2.5em;
   }
 }
-@media screen and (max-height: 730px) {
+@media screen and (max-height: 780px) {
   svg {
     height: 2em;
     width: 2em;
@@ -101,14 +114,14 @@ svg {
 }
 .horizontal-arrow-container {
   flex-direction: row;
-  margin: 4vh 10% 20px;
+  margin: 3vh 10% 3vh;
   border-radius: 40px;
 }
 .vertical-arrow-container,
 .horizontal-arrow-container {
-  box-shadow: 0 2px 2px 0 grey, 0 3px 1px -2px grey, 0 1px 5px 0 grey;
+  box-shadow: 0 2px 5px 0 grey, 0 3px 5px -2px grey, 0 1px 7px 0 grey;
   z-index: 2;
-  background: rgb(255, 255, 255, 0.9);
+  background: rgb(255, 255, 255, 1);
   display: flex;
 }
 .vertical-arrow-container > *,
