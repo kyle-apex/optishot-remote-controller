@@ -1,7 +1,7 @@
 import * as React from 'react';
-import KeyboardButton from './KeyboardButton/KeyboardButton';
-import KeyholdButton from './KeyboardButton/KeyholdButton';
-import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import KeyboardButton from '../../components/KeyboardButton/KeyboardButton';
+import KeyholdButton from '../../components/KeyboardButton/KeyholdButton';
+import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight, FaRegHandRock } from 'react-icons/fa';
 import { MdGolfCourse, MdShuffle, MdTune, MdUndo, MdMap, MdViewList, MdSwitchVideo, MdExitToApp } from 'react-icons/md';
 import { RiRulerLine } from 'react-icons/ri';
 import { GiMultipleTargets, GiHand } from 'react-icons/gi';
@@ -65,6 +65,11 @@ export default function Controller() {
           <div className="button-cell">
             <KeyboardButton keyCode="r" modifier="control">
               <MdUndo />
+            </KeyboardButton>
+          </div>
+          <div className="button-cell">
+            <KeyboardButton keyCode="p" modifier="control">
+              <FaRegHandRock />
             </KeyboardButton>
           </div>
           <div className="button-cell">

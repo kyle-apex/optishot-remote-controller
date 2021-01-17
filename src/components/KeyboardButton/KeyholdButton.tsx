@@ -1,15 +1,9 @@
 import * as React from 'react';
 import axios from 'axios';
 import styles from './KeyboardButton.module.css';
-// import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import { ButtonProps } from './ButtonProps';
 
-interface Props {
-  error?: Error;
-  children?: React.ReactNode;
-  keyCode?: string;
-}
-
-export default function KeyholdButton(props: Props) {
+export default function KeyholdButton(props: ButtonProps) {
   const holdKey = e => {
     cancelEvent(e);
     axios.post('/holdKey', { keyCode: props.keyCode }).then(response => {});

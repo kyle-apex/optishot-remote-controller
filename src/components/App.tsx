@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Controller from './Controller';
-import Home from './Home';
+import Controller from '../pages/Controller/Controller';
+import Home from '../pages/Home';
 import Div100vh from 'react-div-100vh';
 export default function App() {
   return (

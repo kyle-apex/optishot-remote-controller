@@ -56,4 +56,4 @@ li {
   margin-bottom: 10px;
 }
 
-@import '../src/components/Controller.css';
+@import '../src/pages/Controller/Controller.css';

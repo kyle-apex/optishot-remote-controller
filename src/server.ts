@@ -35,8 +35,20 @@ app.use(express.json());
 
 app.post('/pressKey', function (req: any, res: any) {
   res.send();
-  let modifiers = req.body.modifier ? [req.body.modifier] : [];
-  pressKey(req.body.keyCode, modifiers);
+  const screenSize = robot.getScreenSize();
+  robot.moveMouse(screenSize.width / 2, screenSize.height / 2);
+  robot.mouseClick('left');
+  //let modifiers = req.body.modifier ? [req.body.modifier] : [];
+  //pressKey(req.body.keyCode, modifiers);
+});
+
+app.post('/savePickupScore', function (req: any, res: any) {
+  res.send();
+  const screenSize = robot.getScreenSize();
+  robot.moveMouse(screenSize.width / 2, screenSize.height / 2);
+  robot.mouseClick('left');
+  //let modifiers = req.body.modifier ? [req.body.modifier] : [];
+  //pressKey(req.body.keyCode, modifiers);
 });
 
 app.post('/holdKey', function (req: any, res: any) {
