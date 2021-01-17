@@ -27,23 +27,14 @@
   flex: 1 1;
 }
 
+.second-row,
+.right-left-row,
 .first-row {
   height: 20vh;
-  max-height: 100px;
-}
-
-.second-row {
-  height: 20vh;
-  max-height: 100px;
 }
 
 .shot-selection-row {
   flex: 2 0 auto;
-}
-
-.right-left-row {
-  height: 20vh;
-  max-height: 100px;
 }
 
 .container {
@@ -62,14 +53,32 @@
 }
 
 svg {
-  height: 2em;
-  width: 2em;
+  height: 3em;
+  width: 3em;
 }
 
 .horizontal-arrow-container .button-cell:first-child button:last-child svg,
 .horizontal-arrow-container .button-cell:last-child button:first-child svg {
   height: 1em;
   width: 1em;
+}
+@media screen and (max-height: 1000px) {
+  svg {
+    height: 2.5em;
+    width: 2.5em;
+  }
+}
+@media screen and (max-height: 730px) {
+  svg {
+    height: 2em;
+    width: 2em;
+  }
+}
+@media screen and (max-height: 560px) {
+  svg {
+    height: 1.5em;
+    width: 1.5em;
+  }
 }
 @media screen and (max-height: 430px) {
   svg {
@@ -92,12 +101,12 @@ svg {
 }
 .horizontal-arrow-container {
   flex-direction: row;
-  margin: 0px 10% 20px;
+  margin: 4vh 10% 20px;
   border-radius: 40px;
 }
 .vertical-arrow-container,
 .horizontal-arrow-container {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 grey, 0 3px 1px -2px grey, 0 1px 5px 0 grey;
   z-index: 2;
   background: rgb(255, 255, 255, 0.9);
   display: flex;
