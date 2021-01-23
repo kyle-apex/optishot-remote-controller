@@ -44,6 +44,11 @@ app.post('/savePickupScore', function (req: any, res: any) {
   const position = getPickupOKButtonCursorPosition();
   robot.moveMouse(position.x, position.y);
   robot.mouseClick('left');
+
+  // move the mouse out of the way
+  setTimeout(() => {
+    robot.moveMouse(position.x, 100);
+  }, 100);
 });
 
 app.post('/holdKey', function (req: any, res: any) {
