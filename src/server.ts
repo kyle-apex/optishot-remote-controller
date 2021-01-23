@@ -11,6 +11,11 @@ import os from 'os';
 import detectPort from 'detect-port';
 
 import ip from 'ip';
+import { CursorPosition } from './types/cursor-position';
+
+const Store = require('electron-store');
+
+const store = new Store();
 
 app.get('/', (req: any, res: any) => {
   res.redirect(301, '/controller');
@@ -21,34 +26,24 @@ app.set('trust proxy', true);
 // serve up production assets
 app.use(express.static(path.join(__dirname, '')));
 
-// let the react app to handle any unknown routes
-// serve up the index.html if express does'nt recognize the route
 app.get('/serverInfo', function (req: any, res: any) {
   res.send({ hostname: ip.address() || os.hostname(), port: port });
-});
-
-app.get('*', (req: any, res: any) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.use(express.json());
 
 app.post('/pressKey', function (req: any, res: any) {
   res.send();
-  const screenSize = robot.getScreenSize();
-  robot.moveMouse(screenSize.width / 2, screenSize.height / 2);
-  robot.mouseClick('left');
-  //let modifiers = req.body.modifier ? [req.body.modifier] : [];
-  //pressKey(req.body.keyCode, modifiers);
+
+  let modifiers = req.body.modifier ? [req.body.modifier] : [];
+  pressKey(req.body.keyCode, modifiers);
 });
 
 app.post('/savePickupScore', function (req: any, res: any) {
   res.send();
-  const screenSize = robot.getScreenSize();
-  robot.moveMouse(screenSize.width / 2, screenSize.height / 2);
+  const position = getPickupOKButtonCursorPosition();
+  robot.moveMouse(position.x, position.y);
   robot.mouseClick('left');
-  //let modifiers = req.body.modifier ? [req.body.modifier] : [];
-  //pressKey(req.body.keyCode, modifiers);
 });
 
 app.post('/holdKey', function (req: any, res: any) {
@@ -63,9 +58,16 @@ app.post('/releaseKey', function (req: any, res: any) {
   releaseKey(req.body.keyCode);
 });
 
-app.post('/mouseMove', function (req: any, res: any) {
-  console.log('e', req.body.e);
+app.post('/setPickupOKButtonCursorPosition', function (req: any, res: any) {
   res.send();
+
+  const position = robot.getMousePos();
+  setPickupOKButtonCursorPosition(position.x, position.y);
+});
+
+app.get('/getPickupOKButtonCursorPosition', function (req: any, res: any) {
+  const position = getPickupOKButtonCursorPosition();
+  res.send({ x: position.x, y: position.y });
 });
 
 function pressKey(keyCode: string, modifiers?: string[]) {
@@ -83,6 +85,21 @@ function holdKey(keyCode: string, modifiers?: string[]) {
 function releaseKey(keyCode: string, modifiers?: string[]) {
   robot.keyToggle(keyCode, 'up', modifiers || []);
 }
+
+function getPickupOKButtonCursorPosition(): CursorPosition {
+  return new CursorPosition(store.get('pickupOKButtonCursorX'), store.get('pickupOKButtonCursorY'));
+}
+
+function setPickupOKButtonCursorPosition(x: number, y: number) {
+  store.set('pickupOKButtonCursorX', x);
+  store.set('pickupOKButtonCursorY', y);
+}
+
+// let the react app to handle any unknown routes
+// serve up the index.html if express does'nt recognize the route
+app.get('*', (req: any, res: any) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // if not in production use the port 5000
 let port = process.env.PORT || '5000';

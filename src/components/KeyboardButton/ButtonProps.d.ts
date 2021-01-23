@@ -3,4 +3,6 @@ export interface ButtonProps {
   children?: React.ReactNode;
   keyCode?: string;
   modifier?: string;
+  secondKeyCode?: string;
+  onClick?: () => void;
 }

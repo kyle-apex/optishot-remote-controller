@@ -123,6 +123,7 @@ svg {
   z-index: 2;
   background: rgb(255, 255, 255, 1);
   display: flex;
+  overflow: hidden;
 }
 .vertical-arrow-container > *,
 .horizontal-arrow-container > * {

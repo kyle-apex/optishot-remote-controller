@@ -1,12 +1,18 @@
 import * as React from 'react';
 import KeyboardButton from '../../components/KeyboardButton/KeyboardButton';
 import KeyholdButton from '../../components/KeyboardButton/KeyholdButton';
+import Popup from 'reactjs-popup';
 import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight, FaRegHandRock } from 'react-icons/fa';
 import { MdGolfCourse, MdShuffle, MdTune, MdUndo, MdMap, MdViewList, MdSwitchVideo, MdExitToApp } from 'react-icons/md';
 import { RiRulerLine } from 'react-icons/ri';
 import { GiMultipleTargets, GiHand } from 'react-icons/gi';
+import PickupBall from '_/components/PickupBall/PickupBall';
+import 'reactjs-popup/dist/index.css';
 
 export default function Controller() {
+  const [open, setOpen] = React.useState(false);
+  const closeModal = () => setOpen(false);
+
   return (
     <div className="container">
       <div className="first-row row">
@@ -68,7 +74,16 @@ export default function Controller() {
             </KeyboardButton>
           </div>
           <div className="button-cell">
-            <KeyboardButton keyCode="p" modifier="control">
+            <Popup open={open} onClose={closeModal} modal>
+              <PickupBall onComplete={closeModal}></PickupBall>
+            </Popup>
+            <KeyboardButton
+              keyCode="p"
+              modifier="control"
+              onClick={() => {
+                setOpen(true);
+              }}
+            >
               <FaRegHandRock />
             </KeyboardButton>
           </div>
