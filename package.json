@@ -8,7 +8,7 @@
     "dev": "rimraf dist && cross-env NODE_ENV=development webpack --watch --progress --color",
     "prod": "rimraf dist && cross-env NODE_ENV=production webpack --progress --color",
     "test": "mocha -r ts-node/register -r tsconfig-paths/register \"test/**/*.ts\"",
-    "build:win": "electron-builder build --win --x64",
+    "build:win": "electron-builder build --win --x64 --ia32",
     "build:mac": "electron-builder build --mac --x64",
     "postinstall": "electron-rebuild -f -w robotjs",
     "rebuild": "electron-rebuild -f -w robotjs"
@@ -29,7 +29,8 @@
     },
     "win": {
       "target": "nsis",
-      "asar": true
+      "asar": true,
+      "publisherName": "Optishot Remote Controller"
     },
     "nsis": {
       "oneClick": false,
