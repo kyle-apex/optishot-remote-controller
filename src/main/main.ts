@@ -5,6 +5,7 @@ import * as path from 'path';
 import * as url from 'url';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserWindow, app, Menu } from 'electron';
+import MenuBuilder from './menu';
 
 let mainWindow: Electron.BrowserWindow | null;
 
@@ -22,6 +23,9 @@ function createWindow(): void {
       enableRemoteModule: true,
     },
   });
+
+  const menuBuilder = new MenuBuilder(mainWindow);
+  menuBuilder.buildMenu();
 
   // and load the index.html of the app.
   mainWindow

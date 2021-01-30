@@ -44,6 +44,9 @@ button {
 .secondary {
   color: green;
 }
+ul {
+  list-style: none;
+}
 ul li::before {
   content: '\2022';
   color: green;
