@@ -5,7 +5,7 @@ import Home from '../pages/Home';
 import Div100vh from 'react-div-100vh';
 export default function App() {
   return (
-    <Div100vh>
+    <Div100vh className="router-container">
       <Router>
         <Switch>
           <Route path="/controller">
