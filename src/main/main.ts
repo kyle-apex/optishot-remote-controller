@@ -25,7 +25,8 @@ function createWindow(): void {
   });
 
   const menuBuilder = new MenuBuilder(mainWindow);
-  menuBuilder.buildMenu();
+  const menu = menuBuilder.buildMenu();
+  Menu.setApplicationMenu(menu);
 
   // and load the index.html of the app.
   mainWindow
