@@ -2,11 +2,29 @@ import * as React from 'react';
 import KeyboardButton from '../../components/KeyboardButton/KeyboardButton';
 import KeyholdButton from '../../components/KeyboardButton/KeyholdButton';
 import Popup from 'reactjs-popup';
-import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight, FaRegHandRock } from 'react-icons/fa';
-import { MdGolfCourse, MdShuffle, MdTune, MdUndo, MdMap, MdViewList, MdSwitchVideo, MdExitToApp } from 'react-icons/md';
-import { RiRulerLine } from 'react-icons/ri';
-import { GiMultipleTargets, GiHand } from 'react-icons/gi';
+//import { FaChevronUp, FaChevronDown, FaChevronLeft, FaChevronRight, FaRegHandRock } from 'react-icons/fa';
+//import { MdGolfCourse, MdShuffle, MdTune, MdUndo, MdMap, MdViewList, MdSwitchVideo, MdExitToApp } from 'react-icons/md';
+//import { RiRulerLine } from 'react-icons/ri';
+//import { GiMultipleTargets, GiHand } from 'react-icons/gi';
 import PickupBall from '_/components/PickupBall/PickupBall';
+import {
+  ScoreCard,
+  HandToggle,
+  Camera,
+  RangeStats,
+  ShotStats,
+  Map,
+  ChevronUp,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Mulligan,
+  Escape,
+  PickupBallIcon,
+  GolfFlag,
+  LaunchAngle,
+  ClubDistance,
+} from '_/components/icons';
 import 'reactjs-popup/dist/index.css';
 
 export default function Controller() {
@@ -18,34 +36,34 @@ export default function Controller() {
       <div className="first-row row">
         <div className="button-cell">
           <KeyboardButton keyCode="h" modifier="control">
-            <GiHand />
+            <HandToggle />
           </KeyboardButton>
         </div>
         <div className="button-cell">
           <KeyboardButton keyCode="s" modifier="control">
-            <MdViewList />
+            <ScoreCard />
           </KeyboardButton>
         </div>
         <div className="button-cell">
           <KeyboardButton keyCode="f9">
-            <MdSwitchVideo />
+            <Camera />
           </KeyboardButton>
         </div>
       </div>
       <div className="row second-row">
         <div className="button-cell">
           <KeyboardButton keyCode="a" modifier="control">
-            <GiMultipleTargets />
+            <RangeStats />
           </KeyboardButton>
         </div>
         <div className="button-cell">
           <KeyboardButton keyCode="d" modifier="control">
-            <MdTune />
+            <ShotStats />
           </KeyboardButton>
         </div>
         <div className="button-cell">
           <KeyboardButton keyCode="o" modifier="control">
-            <MdMap />
+            <Map />
           </KeyboardButton>
         </div>
       </div>
@@ -54,15 +72,15 @@ export default function Controller() {
           <div className="vertical-arrow-container">
             <div className="button-cell">
               <KeyboardButton keyCode="pageup">
-                <FaChevronUp />
+                <ChevronUp />
               </KeyboardButton>
             </div>
             <div className="buttons-label">
-              <MdShuffle />
+              <LaunchAngle />
             </div>
             <div className="button-cell">
               <KeyboardButton keyCode="pagedown">
-                <FaChevronDown />
+                <ChevronDown />
               </KeyboardButton>
             </div>
           </div>
@@ -70,7 +88,7 @@ export default function Controller() {
         <div className="column middle-column">
           <div className="button-cell">
             <KeyboardButton keyCode="r" modifier="control">
-              <MdUndo />
+              <Mulligan />
             </KeyboardButton>
           </div>
           <div className="button-cell">
@@ -84,12 +102,12 @@ export default function Controller() {
                 setOpen(true);
               }}
             >
-              <FaRegHandRock />
+              <PickupBallIcon />
             </KeyboardButton>
           </div>
           <div className="button-cell">
             <KeyboardButton keyCode="escape">
-              <MdExitToApp />
+              <Escape />
             </KeyboardButton>
           </div>
         </div>
@@ -97,15 +115,15 @@ export default function Controller() {
           <div className="vertical-arrow-container">
             <div className="button-cell">
               <KeyboardButton keyCode="up">
-                <FaChevronUp />
+                <ChevronUp />
               </KeyboardButton>
             </div>
             <div className="buttons-label">
-              <RiRulerLine />
+              <ClubDistance />
             </div>
             <div className="button-cell">
               <KeyboardButton keyCode="down">
-                <FaChevronDown />
+                <ChevronDown />
               </KeyboardButton>
             </div>
           </div>
@@ -115,21 +133,21 @@ export default function Controller() {
         <div className="horizontal-arrow-container">
           <div className="button-cell">
             <KeyholdButton keyCode="left">
-              <FaChevronLeft />
+              <ChevronLeft />
             </KeyholdButton>
             <KeyboardButton keyCode="left">
-              <FaChevronLeft />
+              <ChevronLeft />
             </KeyboardButton>
           </div>
           <div className="buttons-label">
-            <MdGolfCourse />
+            <GolfFlag />
           </div>
           <div className="button-cell">
             <KeyboardButton keyCode="right">
-              <FaChevronRight />
+              <ChevronRight />
             </KeyboardButton>
             <KeyholdButton keyCode="right">
-              <FaChevronRight />
+              <ChevronRight />
             </KeyholdButton>
           </div>
         </div>
