@@ -31,7 +31,8 @@
     "win": {
       "target": "nsis",
       "asar": true,
-      "publisherName": "Optishot Remote Controller"
+      "publisherName": "Optishot Remote Controller",
+      "requestedExecutionLevel": "highestAvailable"
     },
     "nsis": {
       "oneClick": false,
