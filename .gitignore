@@ -1,3 +1,4 @@
+*stats.json
 .vscode/
 dist/
 node_modules/
@@ -31,3 +32,4 @@ Thumbs.db
 # OS X files
 .DS_Store
 ._*
+

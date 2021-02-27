@@ -33,12 +33,10 @@ const commonConfig = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         loader: 'ts-loader',
-        sideEffects: false,
       },
       {
         test: /module\.css$/i,
         exclude: /node_modules/,
-        sideEffects: false,
         use: [
           'style-loader',
           {
@@ -52,12 +50,10 @@ const commonConfig = {
       {
         test: /(?<!module)\.(css|scss)$/,
         use: ['style-loader', 'css-loader'],
-        sideEffects: false,
       },
       {
         test: /\.(jpg|png|svg|ico|icns)$/,
         loader: 'file-loader',
-        sideEffects: false,
         options: {
           name: '[path][name].[ext]',
         },
