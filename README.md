@@ -6,7 +6,7 @@ Remote Control for the Optishot 2 Golf Simulator built using Electron, ReactJS, 
 
 **Optishot 2 Player ready to get started?**
 
-1. Download ([Mac](https://github.com/kyle-apex/optishot-remote-controller/releases/latest/download/Optishot.Remote.Controller.dmg) | [Windows](https://github.com/kyle-apex/optishot-remote-controller/releases/latest/download/Optishot.Remote.Controller.exe)) and open the application
+1. Download ([Mac](https://github.com/kyle-apex/optishot-remote-controller/releases/latest/download/Optishot.Remote.Controller.dmg) | [Windows](https://github.com/kyle-apex/optishot-remote-controller/releases/latest/download/Optishot.Remote.Controller.exe) | [Windows32](https://github.com/kyle-apex/optishot-remote-controller/releases/latest/download/Optishot.Remote.Controller.Windows32.exe)) and open the application
 2. Connect to the same WiFi on your computer and phone
 3. Open the link specified in the application in your mobile web browser
 4. Open Optishot2 (be sure to keep this application running)
